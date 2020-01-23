@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+    <title>Log in</title>
+</head>
+<body>
+<form th:action="@{/login}" method="post">
+    <div align="center">
+    <input type="text" height="100" name="username" placeholder="Username"/>
+    </div>
+    <div align="center">
+    <input type="password" height="100" name="password" placeholder="Password"/>
+    </div>
+    <div align="center">
+    <input type="submit" value="Log in" />
+    </div>
+</form>
+<p align="center">not a member?<a th:herf ="@{/reg}">sign-up</a></p>
+</body>
+</html>
