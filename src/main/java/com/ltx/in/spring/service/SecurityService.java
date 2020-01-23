@@ -18,6 +18,7 @@ public class SecurityService extends WebSecurityConfigurerAdapter {
     private DataSource dataSource;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -42,7 +43,6 @@ public class SecurityService extends WebSecurityConfigurerAdapter {
     public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl db = new JdbcTokenRepositoryImpl();
         db.setDataSource(dataSource);
-
         return db;
     }
 }
