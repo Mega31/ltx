@@ -14,14 +14,10 @@ public class RegView {
     private UserService userService;
 
     @RequestMapping(name = "/reg",method = RequestMethod.GET)
-    public String regView(){
-        return "reg";
-    }
-    @RequestMapping(name = "/reg",method = RequestMethod.GET)
-    public Model processingRegView(Model model){
+    public String processingRegView(Model model){
         UserDto userDto = new UserDto();
         model.addAttribute("UserDto",userDto);
-        return model;
+        return "reg";
     }
     @RequestMapping(name = "/reg",method = RequestMethod.POST)
     public String userCreation(UserDto userDto){

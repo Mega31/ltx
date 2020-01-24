@@ -26,7 +26,7 @@ public class SecurityService extends WebSecurityConfigurerAdapter {
                 .antMatchers("/reg")
                 .permitAll()
                 .and().authorizeRequests()
-                .antMatchers("/reg")
+                .antMatchers("/")
                 .authenticated().and()
                 .formLogin().loginPage("/login").failureForwardUrl("/login?=error")
                 .and().logout().logoutUrl("/logout=?success");
