@@ -1,10 +1,10 @@
-package com.ltx.in.spring.view;
+package com.ltx.in.spring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HomeView {
+public class HomeController {
     @RequestMapping("/")
     public String homeView(){
         return "test";

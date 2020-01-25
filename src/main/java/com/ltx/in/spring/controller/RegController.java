@@ -1,4 +1,4 @@
-package com.ltx.in.spring.view;
+package com.ltx.in.spring.controller;
 
 import com.ltx.in.spring.model.UserEntity;
 import com.ltx.in.spring.service.UserService;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class RegView {
+public class RegController {
     @Autowired
     private UserService userService;
 
